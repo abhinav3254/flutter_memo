@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 void main() => runApp(const AddData());
 
 class AddData extends StatelessWidget {
-  const AddData();
+  const AddData({super.key});
 
   @override
   Widget build(BuildContext context) {
