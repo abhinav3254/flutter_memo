@@ -14,28 +14,26 @@ class MainApp extends StatelessWidget {
         appBar: AppBar(
           centerTitle: true,
           title: const Text(
-            'Navigation Drawer',
+            'Makeup',
           ),
           backgroundColor: const Color(0xff764abc),
         ),
-        drawer: Drawer(
-          child: ListView(padding: EdgeInsets.zero, children: [
-            const DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-              child: Text('Drawer Header'),
+        bottomNavigationBar: BottomNavigationBar(
+          elevation: 1,
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Calls',
             ),
-            ListTile(
-              leading: const Icon(
-                Icons.home,
-              ),
-              title: const Text('Page 1'),
-              onTap: () {
-                Navigator.pop(context);
-              },
+            BottomNavigationBarItem(
+              icon: Icon(Icons.link),
+              label: 'Link',
             ),
-          ]),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
+              label: 'Settings',
+            ),
+          ],
         ),
       ),
     );
