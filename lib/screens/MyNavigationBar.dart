@@ -1,3 +1,4 @@
+import 'package:cash_memo/screens/AddData.dart';
 import 'package:flutter/material.dart';
 
 /// Flutter code sample for [BottomNavigationBar].
@@ -30,15 +31,16 @@ class _BottomNavigationBarExampleState
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     Text(
-      'Index 0: Home',
+      'Index 0: Home Page',
       style: optionStyle,
     ),
+    // Text(
+    //   'Index 1: Add Page',
+    //   style: optionStyle,
+    // ),
+    AddData(),
     Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: School',
+      'Index 2: Settings',
       style: optionStyle,
     ),
   ];
@@ -53,7 +55,7 @@ class _BottomNavigationBarExampleState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('BottomNavigationBar Sample'),
+        title: const Text('CASH MEMO'),
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
@@ -65,12 +67,12 @@ class _BottomNavigationBarExampleState
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
+            icon: Icon(Icons.add),
+            label: 'Add',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'School',
+            icon: Icon(Icons.settings),
+            label: 'Settings',
           ),
         ],
         currentIndex: _selectedIndex,
