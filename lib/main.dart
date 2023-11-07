@@ -1,3 +1,4 @@
+import 'package:cash_memo/screens/MyNavigationBar.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,23 +19,7 @@ class MainApp extends StatelessWidget {
           ),
           backgroundColor: const Color(0xff764abc),
         ),
-        bottomNavigationBar: BottomNavigationBar(
-          elevation: 1,
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Calls',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.link),
-              label: 'Link',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.settings),
-              label: 'Settings',
-            ),
-          ],
-        ),
+        bottomNavigationBar: const BottomNavigationBarExampleApp(),
       ),
     );
   }
